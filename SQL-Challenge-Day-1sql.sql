@@ -35,6 +35,8 @@ select user_id, count(follower_id) as total_follower
 from famous
 group by user_id;
 
+-- FINAL QUERY
+
 -- Without common table expression (CTE) 
 select user_id,
 count(follower_id)*100/(select count(*) from (

@@ -1,7 +1,8 @@
--- You are analyzing a social network dataset at Google.
--- Your task is to find mutual friends between two users, Karl and Hans. 
--- There is only one user named Karl and one named Hans in the dataset.
--- The output should contain 'user_id' and 'user_name' columns.
+-- Google (Medium Level) hashtag #SQL Interview Question
+	-- You are analyzing a social network dataset at Google.
+	-- Your task is to find mutual friends between two users, Karl and Hans. 
+	-- There is only one user named Karl and one named Hans in the dataset.
+	-- The output should contain 'user_id' and 'user_name' columns.
 
 show databases;
 create database GoogleDB;

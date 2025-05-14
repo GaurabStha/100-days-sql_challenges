@@ -62,3 +62,5 @@ karlFriend k
 join hansFriend h on k.friend_id = h.friend_id 
 join users u on h.friend_id = u.user_id;
 
+-- Here, we first created CTE for the friends of Karl and Hans and then joined tables users, and two CTEs to get the common mutual friends between Karl and Hans.
+

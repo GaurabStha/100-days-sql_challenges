@@ -5,11 +5,13 @@
 	-- Then, find the famous percentage of each user. 
 	-- Famous Percentage = number of followers a user has / total number of users on the platform.
 
+-- First we check the databases then created the database 'MetaPlatformDB' for our day 1 challenge.
 show databases;
 
 create database MetaPlatformDB;
 use MetaPlatformDB;
 
+-- We created the table famous and inserted the values in the table.
 CREATE TABLE famous 
 (user_id INT, follower_id INT);
 
@@ -25,6 +27,7 @@ select * from famous;
 select count(distinct(user_id)) as total_follower
 from famous;
 
+-- We use union to get a distinct list of all users by combining user_id and follower_id from the 'famous' table
 select users from (
 select user_id as users from famous
 union
@@ -46,6 +49,7 @@ from famous
 group by user_id;
 
 -- With common table expression (CTE)
+-- Here we used users as a CTE.
 with users as (
 select user_id as users from famous
 union

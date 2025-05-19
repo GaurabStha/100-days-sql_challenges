@@ -32,5 +32,63 @@ INSERT INTO car_launches VALUES
 	(2020,'Ford','Aspire'),
 	(2019,'Ford','Endeavour'),
 	(2020,'Jeep','Wrangler');
+
+-- FINAL QUERY
+-- This is done by me
+-- First we find number of product launched in each year and saved in CTE 'product_each_year'
+with product_each_year as (
+select
+	year,
+    company_name,
+    count(product_name) as number_of_product
+from
+	car_launches
+where
+	year in (2019, 2020)
+group by
+	year, company_name),
+
+-- then we find the product count of previous year 2019 to 2020
+-- We used lag function to find the previous year product count
+-- which will return null if there is no any product in 2019 so we 
+-- used coalesce function to replace null with 0
+with_prev_year as (
+select
+	*,
+    coalesce(lag(number_of_product) 
+			over
+				(partition by company_name order by year)
+			, 0) as previous_year_product_count
+from
+	product_each_year)
+-- Now we find the difference between the number of product in 2020
+-- and number of product in 2019
+select
+	company_name,
+    (number_of_product - previous_year_product_count) as net_difference
+from
+	with_prev_year
+where
+	year = 2020
+order by
+	net_difference desc;
     
-    
+-- The code I copied frome internet
+with product_counts as (
+	select
+		company_name,
+        sum(case when year = 2020 then 1 else 0 end) as product2020,
+        sum(case when year = 2019 then 1 else 0 end) as product2019
+	from 
+		car_launches
+	where
+		year in (2019, 2020)
+	group by
+		company_name)
+select
+	company_name,
+    (product2020-product2019) as net_difference
+from
+	product_counts
+order by
+	net_difference desc;

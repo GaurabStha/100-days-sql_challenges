@@ -8,6 +8,7 @@ show databases;
 create database GoogleDB;
 use GoogleDB;
 
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE users(user_id INT, user_name varchar(30));
 
 INSERT INTO users VALUES

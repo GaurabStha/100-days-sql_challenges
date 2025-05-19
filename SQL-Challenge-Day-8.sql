@@ -10,6 +10,7 @@
 create database TeslaDB;
 use TeslaDB;
 
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE car_launches(
 	year int, 
 	company_name varchar(15), 

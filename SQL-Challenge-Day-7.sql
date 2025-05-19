@@ -7,6 +7,7 @@
 create database ibmDB;
 use ibmDB;
 
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE user_purchases(
 	user_id int, 
 	date date, 

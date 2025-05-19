@@ -7,6 +7,7 @@
 create database MicrosoftDB;
 use MicrosoftDB;
 
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE ms_projects(id int, title varchar(15), budget int);
 
 INSERT INTO ms_projects VALUES 

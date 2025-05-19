@@ -11,7 +11,8 @@ show databases;
 create database MetaPlatformDB;
 use MetaPlatformDB;
 
--- We created the table famous and inserted the values in the table.
+
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE famous 
 (user_id INT, follower_id INT);
 

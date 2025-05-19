@@ -7,6 +7,7 @@
 create database AirbnbDB;
 use AirbnbDB;
 
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE airbnb_apartments(
 	host_id int,
 	apartment_id varchar(5),

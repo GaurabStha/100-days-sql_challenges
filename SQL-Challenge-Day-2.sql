@@ -11,6 +11,7 @@ create database AmazonDB;
 
 use AmazonDB;
 
+-- 𝐒𝐜𝐡𝐞𝐦𝐚 𝐚𝐧𝐝 𝐃𝐚𝐭𝐚𝐬𝐞𝐭:
 CREATE TABLE sf_transactions
 (id INT, created_at datetime, value INT, purchase_id INT);
 

@@ -76,3 +76,4 @@ from (
 	from
 		train_events
 ) as platform_count;
+

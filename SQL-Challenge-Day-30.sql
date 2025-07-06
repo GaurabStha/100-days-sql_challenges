@@ -30,7 +30,7 @@ insert into teams values
 
 select 
 	concat(t1.team_name, " vs ", t2.team_name) as matches
-from 
+from
 	teams as t1
 join
 	teams as t2
